@@ -11,10 +11,10 @@ import { LoginComponent } from './login/login.component';
 import { HomeComponent } from './home/home.component';
 import { CursosComponent } from './cursos/cursos.component';
 
-import { routing } from './app.routing';
 import { CursoDetalheComponent } from './curso-detalhe/curso-detalhe.component';
 import { CursosService } from './cursos/cursos.service';
 import { CursoNaoEncontradoComponent } from './curso-nao-encontrado/curso-nao-encontrado.component';
+import { AppRouterModule } from './app.routing.module';
 
 @NgModule({
   declarations: [
@@ -29,8 +29,8 @@ import { CursoNaoEncontradoComponent } from './curso-nao-encontrado/curso-nao-en
     BrowserModule,
     FormsModule,
     HttpModule,
-    routing,
-    MaterializeModule
+    MaterializeModule,
+    AppRouterModule
   ],
   providers: [
     CursosService
