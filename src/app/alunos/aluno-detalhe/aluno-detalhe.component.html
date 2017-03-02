@@ -1,3 +1,9 @@
-<p>
-  aluno-detalhe works!
-</p>
+<h5> Detalhes do Aluno</h5>
+
+<p>Id: {{ aluno?.id}}</p>
+<p>Nome: {{ aluno?.nome }}</p>
+<p>E-mail: {{ aluno?.email }}</p>
+
+<a class="btn-floating btn-large waves-effect waves-light red" (click)="editarAluno()">
+    <i class="material-icons">mode_edit</i>
+</a>
