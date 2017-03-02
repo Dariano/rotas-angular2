@@ -10,6 +10,7 @@ import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 import { HomeComponent } from './home/home.component';
 
+import { AlunosModule } from './alunos/alunos.module';
 import { CursosModule } from './cursos/cursos.module';
 
 import { AppRouterModule } from './app.routing.module';
@@ -26,6 +27,7 @@ import { AppRouterModule } from './app.routing.module';
     HttpModule,
     MaterializeModule,
     CursosModule,
+    AlunosModule,
     AppRouterModule
   ],
   providers: [],
