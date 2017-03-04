@@ -10,17 +10,21 @@ export class AuthService {
 
   constructor(private router: Router) { }
 
-  fazerLogin(usuario: Usuario){
+  fazerLogin(usuario: Usuario) {
 
-    this.usuarioAutenticado =  usuario.nome == 'dariano' && usuario.senha == '123456';
+    this.usuarioAutenticado = usuario.nome == 'dariano' && usuario.senha == '123456';
 
-    if(this.usuarioAutenticado){
+    if (this.usuarioAutenticado) {
       this.mostrarMenuEmitter.emit(true);
       this.router.navigate(['/']);
     }
-    else{
+    else {
       this.mostrarMenuEmitter.emit(false);
     }
+  }
+
+  usuarioEstaAutenticado() {
+    return this.usuarioAutenticado;
   }
 
 }

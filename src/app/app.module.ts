@@ -1,3 +1,6 @@
+import { AlunosGuard } from './guards/alunos.guard';
+import { CursosGuard } from './guards/cursos.guard';
+import { AuthGuard } from './guards/auth-guard';
 import { AuthService } from './login/auth.service';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
@@ -10,9 +13,6 @@ import { MaterializeModule } from 'angular2-materialize';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 import { HomeComponent } from './home/home.component';
-
-// import { AlunosModule } from './alunos/alunos.module';
-// import { CursosModule } from './cursos/cursos.module';
 
 import { AppRouterModule } from './app.routing.module';
 
@@ -31,7 +31,12 @@ import { AppRouterModule } from './app.routing.module';
     // AlunosModule,
     AppRouterModule
   ],
-  providers: [AuthService],
+  providers: [
+    AuthService,
+    AuthGuard,
+    CursosGuard,
+    AlunosGuard
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
